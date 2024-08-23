@@ -100,6 +100,18 @@ func _ready():
 	_on_scene_changed(EditorInterface.get_edited_scene_root())
 	_on_editor_inspector_edited_object_changed()
 
+static func _static_init() -> void:
+
+	print_debug(BlockCodeLanguage.instance())
+	Engine.unregister_script_language(BlockCodeLanguage.instance())
+	print_debug("Registering block code language")
+	Engine.register_script_language(BlockCodeLanguage.instance())
+	var count = Engine.get_script_language_count()
+	print_debug("Script language count: %s" % count)
+	for i in range(0, count):
+		var lang = Engine.get_script_language(i)
+		lang.get_class()
+		print_debug("Script language: %s" % lang)
 
 func _on_scene_changed(scene_root: Node):
 	main_panel.switch_scene(scene_root)
