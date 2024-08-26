@@ -76,7 +76,7 @@ static func get_general_blocks() -> Array[Block]:
 	block_list.append(block)
 
 	# Math
-	for block_name in [&"add", &"subtract", &"multiply", &"divide", &"pow", &"randf_range", &"randi_range", &"sin", &"cos", &"tan"]:
+	for block_name in [&"add", &"subtract", &"multiply", &"divide", &"pow", &"randf_range", &"randi_range", &"sin", &"cos", &"tan", &"vector2_scalar_multiply", &"vector2_dot_product"]:
 		block = Util.instantiate_block_by_name(block_name)
 		block_list.append(block)
 

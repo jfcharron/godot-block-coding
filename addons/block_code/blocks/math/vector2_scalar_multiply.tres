@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://db8jeqblidfvc"]
+
+[ext_resource type="Script" path="res://addons/block_code/code_generation/block_definition.gd" id="1_a8wln"]
+
+[resource]
+script = ExtResource("1_a8wln")
+name = &"vector2_scalar_multiply"
+target_node_class = ""
+description = "Multiplies each component of [i]vector[/i] by [i]factor[/i]."
+category = "Math"
+type = 3
+variant_type = 5
+display_template = "{vector: VECTOR2} * {factor: FLOAT}"
+code_template = "({vector} * {factor})"
+defaults = {
+"factor": 0.0,
+"vector": Vector2(0, 0)
+}
+signal_name = ""
+scope = ""

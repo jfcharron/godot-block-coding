@@ -1,0 +1,22 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://ce3ls2qtsnlqt"]
+
+[ext_resource type="Script" path="res://addons/block_code/code_generation/block_definition.gd" id="1_keojp"]
+
+[resource]
+script = ExtResource("1_keojp")
+name = &"vector2_dot_product"
+target_node_class = ""
+description = "Returns the dot product of [i]a[/i] and [i]b[/i]. This can be used to compare the angle between two vectors. For example, this can be used to determine whether an enemy is facing the player.
+
+The dot product will be 0 for a right angle (90 degrees), greater than 0 for angles narrower than 90 degrees and lower than 0 for angles wider than 90 degrees."
+category = "Math"
+type = 3
+variant_type = 5
+display_template = "{a: VECTOR2} ⋅ {b: VECTOR2}"
+code_template = "({a}.dot({b}))"
+defaults = {
+"a": Vector2(0, 0),
+"b": Vector2(0, 0)
+}
+signal_name = ""
+scope = ""
